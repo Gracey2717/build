@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/build/static/css/main.c4aeb470.css",
+    "main.js": "/build/static/js/main.f831f934.js",
+    "static/media/aboutpic2.jpg": "/build/static/media/aboutpic2.0eafafcb2ab1c2529db2.jpg",
+    "static/media/construction-site-silhouettes.jpg": "/build/static/media/construction-site-silhouettes.8d61999632d9c8c99b2f.jpg",
+    "static/media/consult1.jpeg": "/build/static/media/consult1.4ff764fa22dda6120918.jpeg",
+    "static/media/Building2.jpg": "/build/static/media/Building2.e53564f33c552c0a0d05.jpg",
+    "index.html": "/build/index.html",
+    "main.c4aeb470.css.map": "/build/static/css/main.c4aeb470.css.map",
+    "main.f831f934.js.map": "/build/static/js/main.f831f934.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c4aeb470.css",
+    "static/js/main.f831f934.js"
+  ]
+}
