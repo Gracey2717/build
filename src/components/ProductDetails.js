@@ -1,66 +1,612 @@
 // src/pages/ProjectDetails.jsx
+import { useParams } from "react-router-dom";
 import React from "react";
-import { useParams, Link } from "react-router-dom";
 
 function ProjectDetails() {
   const { id } = useParams();
 
-  const projects = {
-    1: {
+  const allProjects = [
+    {
+      id: 1,
       title: "Residential Duplex",
-      details:
-        "This duplex was designed with cutting-edge architecture, solar power integration, and energy efficiency in mind. Completed in 2024.",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
     },
-    2: {
-      title: "Commercial Complex",
-      details:
-        "This project provided workspace solutions for businesses with modern amenities, elevators, and eco-friendly designs.",
+    {
+      id: 2,
+      title: "Clean contemporary bungalow",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A 4-bedroom fully detached bungalow designed for a retired couple seeking accessibility, low maintenance, and long-term comfort.",
+      clientNeed:
+        "A home with wide hallways, fewer stairs, high ventilation, and simple modern finishes.",
+      solution:
+        "We developed a low-profile structure with open-plan interiors, wheelchair-friendly pathways, and heat-resistant roofing.",
+      features: [
+        "Anti-slip floor tiles",
+        "Aluminum roofing",
+        "Smart water storage system",
+        "Cross-ventilated living area", 
+        "Spacious outdoor sit-out", 
+      ],
+      timeline: "4 months",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
     },
-    3: {
-      title: "Road Development",
-      details:
-        "A 50km road construction improving trade between local communities and reducing travel time significantly.",
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
     },
-    4: {
-      title: "Luxury Apartments",
-      details:
-        "The apartments are designed with modern architecture, gym facilities, and 24/7 security.",
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
     },
-    5: {
-      title: "Water Treatment Plant",
-      details:
-        "This project ensures access to clean drinking water using sustainable filtration technologies.",
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
     },
-    6: {
-      title: "Industrial Warehouse",
-      details:
-        "Built with reinforced steel frames and fire-safety systems, serving multiple companies for logistics.",
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
     },
-    7: {
-      title: "University Campus Block",
-      details:
-        "This block includes lecture halls, laboratories, and digital classrooms for modern learning.",
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
     },
-  };
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+     
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
+    {
+      id: 1,
+      title: "Residential Duplex",
+      banner: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200",
+      overview:
+        "A high-end residential duplex designed for a young family seeking functionality, elegance, and long-term value.",
+      clientNeed:
+        "Client wanted a modern duplex with natural lighting, efficient ventilation, and a layout suitable for both privacy and social gatherings.",
+      solution:
+        "We provided full architectural design, structural engineering, electrical planning, interior layout, and landscaping.",
+      features: [
+        "Solar power integration",
+        "Premium POP ceiling finish",
+        "Italian marble flooring",
+        "Automated lighting",
+        "Energy-efficient windows",
+      ],
+      timeline: "6 months (Jan 2024 – June 2024)",
+      budgetRange: "₦75M – ₦110M",
+      results:
+        "Client received a fully functional luxury duplex with increased property value and reduced energy consumption.",
+      images: [
+        "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
+        "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800"
+      ],
+    },
 
-  const project = projects[id];
+    // Add others later… (for now one sample)
+  ];
 
-  if (!project) {
-    return <h2>Project not found</h2>;
-  }
+  const project = allProjects.find((p) => p.id === Number(id));
+
+  if (!project) return <p>Project not found.</p>;
 
   return (
-    <section className="project-details">
-      <div className="details-container">
-        <h2>{project.title}</h2>
-        <p>{project.details}</p>
+    <div className="project-details">
+      <img className="banner" src={project.banner} alt={project.title} />
 
-        {/* Back button */}
-        <Link to="/projects" className="back-btn">
-          ← Back to Projects
-        </Link>
-      </div>
-    </section>
+      <h1>{project.title}</h1>
+
+      <section>
+        <h2>Overview</h2>
+        <p>{project.overview}</p>
+      </section>
+
+      <section>
+        <h2>Client Requirement</h2>
+        <p>{project.clientNeed}</p>
+      </section>
+
+      <section>
+        <h2>Our Solution</h2>
+        <p>{project.solution}</p>
+      </section>
+
+      <section>
+        <h2>Key Features</h2>
+        <ul>
+          {project.features.map((f, index) => (
+            <li key={index}>{f}</li>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <h2>Project Timeline</h2>
+        <p>{project.timeline}</p>
+      </section>
+
+      <section>
+        <h2>Results</h2>
+        <p>{project.results}</p>
+      </section>
+
+      <section className="gallery">
+        <h2>Project Gallery</h2>
+        <div className="images">
+          {project.images.map((img, index) => (
+            <img key={index} src={img} alt={`Project view ${index + 1}`} />
+          ))}
+        </div>
+      </section>
+    </div>
   );
 }
 

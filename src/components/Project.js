@@ -8,7 +8,8 @@ function Projects() {
     {
       id: 1,
       title: "Residential Duplex",
-      description: "A modern duplex designed and constructed for luxury living.",
+      description:
+        "A modern duplex designed and constructed for luxury living.",
       image:
         "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800",
       details:
@@ -19,15 +20,15 @@ function Projects() {
       title: "Commercial Complex",
       description:
         "A multi-story office complex built to meet international standards.",
-      image:
-        "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800",
+      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800",
       details:
         "This project provided workspace solutions for businesses with modern amenities, elevators, and eco-friendly designs.",
     },
     {
       id: 3,
       title: "Luxury Apartments",
-      description: "High-rise apartment block with state-of-the-art facilities.",
+      description:
+        "High-rise apartment block with state-of-the-art facilities.",
       image:
         "https://images.unsplash.com/photo-1599423300746-b62533397364?w=800",
       details:
@@ -85,8 +86,11 @@ function Projects() {
               <div className="project-info">
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
+                <Link to={`/projects/${project.id}`} className="learn-more-btn">
+                  Learn More
+                </Link>
+
                 {/* ✅ Learn More button */}
-               
               </div>
             </div>
           ))}
