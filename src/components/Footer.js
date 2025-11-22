@@ -7,7 +7,7 @@ function Footer() {
       <div className="footer-container">
         {/* Company Info */}
         <div className="footer-section">
-          <h3>Dad’s Construction Co.</h3>
+          <h3>PJ and Crew</h3>
           <p>
             Building excellence with integrity, innovation, and quality
             craftsmanship.
@@ -28,7 +28,7 @@ function Footer() {
         {/* Contact Info */}
         <div className="footer-section">
           <h4>Contact</h4>
-          <p>Email: info@dadcompany.com</p>
+          <p>Email: pjandcrews@gmail.com</p>
           <p>Phone: +234 803 553 1793</p>
           <p>Lagos, Nigeria</p>
         </div>

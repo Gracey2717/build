@@ -26,15 +26,6 @@ function Projects() {
     },
     {
       id: 3,
-      title: "Road Development",
-      description: "Highway project for improved transportation and commerce.",
-      image:
-        "https://images.unsplash.com/photo-1503220317375-aaad61436b1b?w=800",
-      details:
-        "A 50km road construction improving trade between local communities and reducing travel time significantly.",
-    },
-    {
-      id: 4,
       title: "Luxury Apartments",
       description: "High-rise apartment block with state-of-the-art facilities.",
       image:
@@ -43,16 +34,7 @@ function Projects() {
         "The apartments are designed with modern architecture, gym facilities, and 24/7 security.",
     },
     {
-      id: 5,
-      title: "Water Treatment Plant",
-      description: "Civil works for sustainable clean water distribution.",
-      image:
-        "https://images.unsplash.com/photo-1581092334707-37f6d1f1d5f6?w=800",
-      details:
-        "This project ensures access to clean drinking water using sustainable filtration technologies.",
-    },
-    {
-      id: 6,
+      id: 4,
       title: "Industrial Warehouse",
       description: "Large-scale construction for logistics and storage.",
       image:
@@ -61,9 +43,18 @@ function Projects() {
         "Built with reinforced steel frames and fire-safety systems, serving multiple companies for logistics.",
     },
     {
-      id: 7,
+      id: 5,
       title: "University Campus Block",
       description: "Educational facility designed for modern learning needs.",
+      image:
+        "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800",
+      details:
+        "This block includes lecture halls, laboratories, and digital classrooms for modern learning.",
+    },
+    {
+      id: 6,
+      title: "And Many More...",
+      description: "Various residential, commercial, and industrial projects.",
       image:
         "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=800",
       details:
@@ -95,9 +86,7 @@ function Projects() {
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 {/* ✅ Learn More button */}
-                <Link to={`/projects/${project.id}`} className="learn-more-btn">
-                  Learn More
-                </Link>
+               
               </div>
             </div>
           ))}
