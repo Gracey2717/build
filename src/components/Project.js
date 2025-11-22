@@ -89,8 +89,6 @@ function Projects() {
                 <Link to={`/projects/${project.id}`} className="learn-more-btn">
                   Learn More
                 </Link>
-
-                {/* ✅ Learn More button */}
               </div>
             </div>
           ))}
