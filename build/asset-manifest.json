@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/build/static/css/main.6f723e65.css",
-    "main.js": "/build/static/js/main.3eac40e8.js",
-    "static/media/aboutpic2.jpg": "/build/static/media/aboutpic2.0eafafcb2ab1c2529db2.jpg",
-    "static/media/construction-site-silhouettes.jpg": "/build/static/media/construction-site-silhouettes.8d61999632d9c8c99b2f.jpg",
-    "static/media/new-york-city.jpg": "/build/static/media/new-york-city.277f140778c822d858cc.jpg",
-    "static/media/consult1.jpeg": "/build/static/media/consult1.4ff764fa22dda6120918.jpeg",
-    "static/media/Building2.jpg": "/build/static/media/Building2.e53564f33c552c0a0d05.jpg",
-    "index.html": "/build/index.html",
-    "main.6f723e65.css.map": "/build/static/css/main.6f723e65.css.map",
-    "main.3eac40e8.js.map": "/build/static/js/main.3eac40e8.js.map"
+    "main.css": "./static/css/main.c126a249.css",
+    "main.js": "./static/js/main.a9f2072f.js",
+    "static/media/aboutpic2.jpg": "./static/media/aboutpic2.0eafafcb2ab1c2529db2.jpg",
+    "static/media/construction-site-silhouettes.jpg": "./static/media/construction-site-silhouettes.8d61999632d9c8c99b2f.jpg",
+    "static/media/new-york-city.jpg": "./static/media/new-york-city.277f140778c822d858cc.jpg",
+    "static/media/consult1.jpeg": "./static/media/consult1.4ff764fa22dda6120918.jpeg",
+    "static/media/Building2.jpg": "./static/media/Building2.e53564f33c552c0a0d05.jpg",
+    "index.html": "./index.html",
+    "main.c126a249.css.map": "./static/css/main.c126a249.css.map",
+    "main.a9f2072f.js.map": "./static/js/main.a9f2072f.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f723e65.css",
-    "static/js/main.3eac40e8.js"
+    "static/css/main.c126a249.css",
+    "static/js/main.a9f2072f.js"
   ]
 }
